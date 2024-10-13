@@ -14,11 +14,10 @@ spec:
       labels: 
         app: vprodb
     spec:
-      spec:
-        tolerations:
-          - key: "node-role.kubernetes.io/control-plane"
-            operator: "Exists"
-            effect: "NoSchedule"
+      tolerations:
+        - key: "node-role.kubernetes.io/control-plane"
+          operator: "Exists"
+          effect: "NoSchedule"
       containers:
         - name: vprodb
           image: mfedocker/vprofiledb:latest
